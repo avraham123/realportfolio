@@ -77,7 +77,7 @@ header{
     display: none;
 }
 
-.home{
+.header{
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -118,10 +118,11 @@ header{
 }
 
 .home-text span{
-    font-size: 1rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 600;
     color: var(--second-color);
+    font-family: monospace;
 }
 
 .home-text span{
@@ -130,7 +131,7 @@ header{
 }
 
 .home-text h1{
-    font-size: 3.2rem;
+    font-size: 5rem;
     color: var(--main-color);
     font-weight: bolder;
 
@@ -147,11 +148,21 @@ header{
     color: var(--second-color);
     text-transform: uppercase;
     margin: 0.5rem 0 1.4rem;
+    font-family: monospace;
 }
 
 .home-text h2{
     cursor: default;
 
+}
+
+.downloadBtn
+{
+    justify-content: center;
+    width: fit-content;
+    margin-left: 43%;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .btn{
@@ -160,6 +171,7 @@ header{
     border-radius: 40px;
     color: var(--second-color);
     font-weight: 500;
+    justify-content: center;
 }
 
 .btn:hover{
@@ -192,7 +204,7 @@ header{
 
 .shop-container .box{
     flex: 1 1 10rem;
-    background: var(--main-color);
+    background:var(--main-color);
     padding: 20px;
     display: flex;
     text-align: center;
@@ -201,7 +213,15 @@ header{
     margin-top: 3rem;
     border-radius: 0.5rem;
 
+    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-basis: calc(23.33% - 20px); 
+    margin-bottom: 40px;
+
 }
+
+
 
 .shop-container .box .box-img{
     width: 150px;
@@ -217,32 +237,41 @@ header{
 
 }
 
+.shop-container .box:hover{
+    background:#002758;
+    
+    
+}
+
+
+
 .stars{
     margin: 1rem 0 0 0.1rem ;
 }
 
 .shop-container .box .stars .bx{
-    color: #bbfcff;
+    color: #eefeff;
 }
 
 .shop-container .box h2
 {
-    color: var(--second-color);
-    font-size: 1.2rem;
+    color: #FFF;
+    font-size: 1.8rem;
 }
 
 
 .shop-container .box span
 {
-    color: var(--second-color);
-    font-size: 1.4rem;
+    color: #FFF;
+    font-size: 1.1rem;
     font-weight: 500;
     margin: 0.2rem 0 0.5rem;
 }
 
 .box .btn{
-    border: 2px solid #bbfcff;
-    color: var(--second-color);
+    border: 2px solid #000000;
+    color:#000000;
+    background: #FFF;
 }
 
 .box .btn:hover{
@@ -289,6 +318,13 @@ header{
     gap: 1.5rem;
 }
 
+.portfoilo{
+   
+   
+    background: rgb(187, 252, 255);
+    gap: 1.5rem;
+}
+
 .about-img{
     flex: 1 1 17rem;
 }
@@ -308,6 +344,28 @@ header{
 }
 
 
+
+#back-to-top-btn {
+    display: none;
+    position:fixed;
+    bottom: 10px;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 99;
+    background-color: rgb(0, 49, 81);
+   padding: 3px;
+   border-radius: 15%;
+  width: 80px;
+  height: 30px;
+  color: #fff;
+  }
+  
+  #back-to-top-btn:hover {
+    cursor: pointer;
+    background-color: #111;
+  }
+
+
 .contact{
     display: flex;
     flex-direction: column;
@@ -325,6 +383,7 @@ header{
     color: #fff;
     background: #000000;
     border-radius: 50%;
+    margin-top: 30px;
 
 
 
@@ -475,6 +534,11 @@ header{
 
 }
 
+
+.copyright{
+    text-align: center;
+   
+}
 
 @media (max-width:1150px){
     header{
@@ -656,7 +720,7 @@ header{
         font-size: 1rem;
         text-align: center;
         display: flex;
-        margin-left: 40%;
+        margin-left: 36%;
         
         
        
@@ -664,12 +728,107 @@ header{
         
     }
 
+    .delivery-text p{
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .delivery-text h2{
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .shop-container .box{
+
+        margin: 30px;
+        
+
+
+    }
+
+    .downloadBtn{
+        margin-left: 28%;
+    }
     
 
     .about-col-1{
         width: 80%;
         margin-left: 50px;
     }
+
+    .copyright{
+        text-align: center;
+       
+    }
+
+    .heading span {
+        font-size: 1.2rem;
+        
+    }
 }
 
+
+@media (max-width:300px){
+
+    .about-col-1 img{
+        margin-left: -10%;
+    }
+
+    .downloadBtn{
+        margin-left: 18%;
+    }
+
+    .copyright{
+        text-align: center;
+       
+    }
+
+    .delivery-text p{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .delivery-text h2{
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .shop-container .box .box-img img {
+        width: 80%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    
+
+    .shop-container .box h2 {
+        color: #FFF;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .shop-container .box span {
+        color: #FFF;
+        font-size: 1.0rem;
+        font-weight: 500;
+        margin: 0.2rem 0 0.5rem;
+        margin-bottom: 20px;
+    }
+
+    .home-text h1 {
+        font-size: 2.2rem;
+        text-align: center;
+       
+    }
+
+    .heading span {
+        font-size: 0.9rem;
+        text-transform: lowercase;
+    }
+
+}
 
