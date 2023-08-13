@@ -24,7 +24,7 @@ img{
 }
 
 header{
-    position: fixed;
+   
     width: 100%;
     top: 0;
     right: 0;
@@ -35,8 +35,60 @@ header{
     background: #fff;
     box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
     padding: 15px 10%;
-    transition: 0.2s;
+   
+    position:fixed;
+  
+}.home-text,
+.home-img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
 }
+.header.active .home-img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home-text,
+.home-img img {
+    animation: fadeIn 1s ease forwards;
+}
+
+.box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.box.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.box1 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.box1.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .logo{
     display: flex;
@@ -439,6 +491,15 @@ header{
     flex-wrap: wrap;
     background: #ffffff;
     gap: 1.5rem;
+
+    opacity: 0;
+    transform: translateY(50px); /* Initial position for fade-in effect */
+    transition: opacity 0.5s, transform 1.5s;
+}
+
+.about.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .portfoilo{
