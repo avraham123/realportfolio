@@ -105,3 +105,27 @@ document.addEventListener("DOMContentLoaded", function() {
       observer.observe(box);
   });
 });
+
+function isElementInViewport(el, offset) {
+  var rect = el.getBoundingClientRect();
+  return (
+      rect.top + offset <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+function handleScroll() {
+  var aboutSection = document.querySelector('.about');
+  var elementsToFadeIn = aboutSection.querySelectorAll('.fade-in-element');
+  
+  if (isElementInViewport(aboutSection, window.innerHeight * 0.1)) {
+      aboutSection.classList.add('fade-in');
+      elementsToFadeIn.forEach(function (element, index) {
+          setTimeout(function () {
+              element.classList.add('fade-in');
+          }, index * 300); // Adjust the delay as needed
+      });
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll); // To handle initial page load

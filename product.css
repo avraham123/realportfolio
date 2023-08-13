@@ -496,8 +496,18 @@ header{
     transform: translateY(50px); /* Initial position for fade-in effect */
     transition: opacity 0.5s, transform 1.5s;
 }
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
 
 .about.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-element.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
