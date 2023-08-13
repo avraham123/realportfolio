@@ -129,3 +129,15 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll); // To handle initial page load
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var scrollToTopButton = document.getElementById('scrollToTop');
+  
+  scrollToTopButton.addEventListener('click', function () {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
+});
